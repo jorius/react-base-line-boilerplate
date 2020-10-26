@@ -1,0 +1,11 @@
+{
+  "userLoginSvcResponse": {
+    "email": "admin@reactjs.com",
+    "languageCode": "es",
+    "name": "Admin",
+    "permissions": [
+      "MainMenu.Home"
+    ],
+    "token": "qiowAS9ndnjLKSS32LaLAPlDKL2"
+  }
+}

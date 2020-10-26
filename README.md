@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Los Componentes, Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Content
 
-## Available Scripts
+1. [Prerequisites](#prerequisites)
+2. [Architecture](#architecture)
+3. [How to run locally](#how-to-run-locally)
+4. [Switch between mock services and real services](#switch-between-mock-services-and-real-services)
+5. [React.Lazy, React.Suspense and error boundary implementation](#react.lazy,-react.suspense-and-error-boundary-implementation)
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+1. [Git](https://git-scm.com/)
+2. [Node](https://nodejs.org/en/)
+3. [VS Code](https://code.visualstudio.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Architecture
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Folder         | Description  	                                                                                                    |
+|---	         |---	                                                                                                                |
+| .vscode  	     | Visual studio code workspace settings.  	                                                                            |
+| src/assets  	 | Web app assets, such as images, fonts, pure css stylesheets, icons, etc.   	                                        |
+| src/components | Common components and controls that could be being used anywhere in the application or in the project itself.  	    |
+| src/config  	 | Routes services, inner app routes, environments settings, unit test config, etc.   	                                |
+| src/core  	 | Main startup of the application, compatibility, mock services, routes building, url mapping, etc.                    |
+| src/pages  	 | Main pages of the application, such as: login page, settings page, home page, etc.  	                                |
+| src/resources  | Language support text files.   	                                                                                    |
+| src/redux  	 | Redux store, action creators, reducers, services and everything related with the flow data of the application.  	    |
+| src/styles  	 | Main styles, css stylesheets files, custom theme, color palette, etc.  	                                            |
+| src/test  	 | Unit test coverage of the components, redux and util functions etc.  	                                            |
 
-### `npm test`
+## How to run locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once you already clone this repo just go the root folder and run:
 
-### `npm run build`
+```bash
+# Install needed packages
+> npm install
+# Run local server
+> npm run start
+# Happy hacking!
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Switch between mock services and real services
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open the `globals.json` file located in `src/config/settings` and toggle the property `isEnabled` in `serviceMocker` object:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```json
+"serviceMocker": {
+    "delayResponse": 300,
+    "isEnabled": true,
+    "loginEmail": "admin@reactjs.com",
+    "loginPassword": "MTIzNDU2",
+    "passwordRecoveryCode": "MTIzNDU2"
+}
+```
 
-### `npm run eject`
+## React.Lazy, React.Suspense and error boundary implementation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To check these implementations go to `src/pages/master-page` and review the following files:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| File                     | Implementation                    |
+|-                         |-                                  |
+| component-mapper.js      | React.Lazy                        |
+| routes.js                | React.Suspense and error boundary |
+| error-boundary.js        | Error boundary                    |

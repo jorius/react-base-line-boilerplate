@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "name": "production"
+  },
+  "reduxLogger": {
+    "isEnabled": false
+  },
+  "services": {
+    "root": "https://prod.react.mock.com"
+  }
+}

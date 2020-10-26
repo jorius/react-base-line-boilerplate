@@ -1,0 +1,35 @@
+{
+  "appVersion": null,
+  "loadingPage": {
+    "isVisible": false,
+    "msg": null
+  },
+  "modalDialog": {
+    "cancelLabel": null,
+    "customActions": null,
+    "customActionsTop": null,
+    "isVisible": false,
+    "maxWidth": null,
+    "msg": null,
+    "okLabel": null,
+    "onConfirm": null,
+    "showCancel": true,
+    "title": null,
+    "width": null
+  },
+  "toastNotification": {
+    "isVisible": false,
+    "msg": null,
+    "type": null
+  },
+  "user": {
+    "account": {
+      "authToken": null,
+      "email": null,
+      "name": null,
+      "permissions": []
+    },
+    "languageCode": "en",
+    "rememberMe": false
+  }
+}

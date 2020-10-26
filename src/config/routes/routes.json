@@ -1,0 +1,30 @@
+[
+  {
+    "container": "HomePageContainer",
+    "name": "home",
+    "permission": null,
+    "requiresLogout": false,
+    "url": "/home"
+  },
+  {
+    "container": "LoginPageContainer",
+    "name": "login",
+    "permission": null,
+    "requiresLogout": true,
+    "url": "/login"
+  },
+  {
+    "container": "SettingsPageContainer",
+    "name": "settings",
+    "permission": null,
+    "requiresLogout": false,
+    "url": "/settings"
+  },
+  {
+    "container": "NotFoundPageContainer",
+    "name": "notFound",
+    "permission": null,
+    "requiresLogout": false,
+    "url": "/404"
+  }
+]

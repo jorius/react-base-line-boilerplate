@@ -1,0 +1,8 @@
+{
+  "environment": {
+    "name": "local"
+  },
+  "services": {
+    "root": "https://local.react.mock.com"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/*.css": true,
+    "build": true,
+    "coverage": true,
+    "node_modules": true,
+    "package-lock.json": true
+  },
+  "javascript.suggestionActions.enabled": false,
+  "search.exclude": {
+    "**/build": true,
+    "**/coverage": true,
+    "**/node_modules": true
+  }
+}

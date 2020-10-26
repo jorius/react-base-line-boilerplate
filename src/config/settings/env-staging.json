@@ -1,0 +1,8 @@
+{
+  "environment": {
+    "name": "staging"
+  },
+  "services": {
+    "root": "https://staging.react.mock.com"
+  }
+}
